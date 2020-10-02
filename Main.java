@@ -1,6 +1,7 @@
+import java.util.Scanner;
 /**
- *
- * @author 
+ * Creates a program that counts down to the users * selected number by 5's
+ * @author Jaden Ramcharan
  */
 public class Main {
 
@@ -9,7 +10,22 @@ public class Main {
    * @param args the command line arguments
    */
   public static void main(String[] args) {
-    // TODO code application logic here
+    // creates scanner for user input
+    Scanner input = new Scanner(System.in);
+
+    //Gets users countdown number
+    System.out.println("Please enter an integer to count down to.");
+    int stop = input.nextInt();
+
+    //countdown start variable
+    int START = 100;
+
+    //countdown loop
+    System.out.println("Count down:");
+    while(stop <= START){
+      System.out.println(START);
+      START = START - 5;
+    }
     
   }
 }
